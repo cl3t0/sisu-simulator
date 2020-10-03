@@ -2,16 +2,16 @@ from datetime import datetime
 from classificacao import calcula_classificacao, salva_classificacao
 
 
-def main():
+def main(nome_entrada, nome_saida):
 
-    arquivo_entrada = open('entrada.txt', 'r')
+    arquivo_entrada = open(nome_entrada, 'r')
     quantidade_cursos, quantidade_alunos = arquivo_entrada.readline().split()
     quantidade_cursos = int(quantidade_cursos)
     quantidade_alunos = int(quantidade_alunos)
     cursos = le_cursos(arquivo_entrada, quantidade_cursos)
     alunos = le_alunos(arquivo_entrada, quantidade_alunos)
     classificacao = calcula_classificacao(cursos, alunos)
-    salva_classificacao(classificacao)
+    salva_classificacao(classificacao, nome_saida)
     arquivo_entrada.close()
 
 
@@ -72,4 +72,4 @@ def le_alunos(arquivo, quantidade):
     return alunos
 
 
-main()
+main('entrada.txt', 'saida.txt')

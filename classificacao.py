@@ -67,8 +67,8 @@ def selecionar_alunos_primeira_opcao(curso, alunos):
         return selecionados, lista_espera
 
 
-def salva_classificacao(classificacoes):
-    arquivo = open('saida.txt', 'w')
+def salva_classificacao(classificacoes, nome_arquivo):
+    arquivo = open(nome_arquivo, 'w')
     for nome in classificacoes.keys():
         classificacao = classificacoes[nome]
         nota_corte = classificacao['nota_corte']
