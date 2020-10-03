@@ -82,3 +82,4 @@ def salva_classificacao(classificacoes, nome_arquivo):
         for i in lista_espera:
             arquivo.write('{} {}\n'.format(i['nome'], i['nota_media']))
         arquivo.write('\n')
+    arquivo.close()
