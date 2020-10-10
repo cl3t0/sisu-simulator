@@ -18,9 +18,9 @@ def calcula_classificacao(cursos, alunos):
                 'lista_espera': []
             }
         classificacoes[nome] = classificacao
-        for i in lista_espera:
-            if i not in nao_selecionados_primeira_opcao:
-                nao_selecionados_primeira_opcao.append(i)
+        for aluno in lista_espera:
+            if aluno not in nao_selecionados_primeira_opcao:
+                nao_selecionados_primeira_opcao.append(aluno)
     for curso in cursos:
         nome = curso['nome']
         selecionados, lista_espera = selecionar_alunos_segunda_opcao(
