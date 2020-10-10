@@ -1,0 +1,36 @@
+7 14
+1,Matematica,2
+2,Física,2
+3,Química,2
+4,Estatística,5
+5,Ciência da Computação,3
+6,Farmácia,1
+7,Letras,2
+Ana da Silva 01/06/2020 - 22:20:45
+700 700 800 1 2
+João Pereira Lemes 01/06/2020 - 21:20:05
+800 700 700 1 2
+José Ribeiro Nunes da Silva 01/06/2020 - 21:15:35
+800 700 800 1 2
+Beatriz Silveira 05/06/2020 - 20:20:25
+700 700 500 3 2
+Francisco Almeida Alves 01/06/2020 - 17:20:05
+600 600 500 4 3
+Carlos Costa 04/06/2020 - 21:20:05
+700 700 500 3 4
+Patrícia Pereira 02/06/2020 - 21:20:05
+900 700 800 3 4
+Antônio Roberto da Silva 01/06/2020 - 21:00:05
+700 700 600 4 2
+Izabela Soares Silva 06/06/2020 - 11:20:05
+837 837 742 5 3
+Gustavo Couto Ribeiro 03/06/2020 - 22:24:05
+837 742 837 5 4
+Rafaela Coutinho 09/06/2020 - 21:27:05
+837 742 837 5 4
+José Roberto Silveira 10/06/2020 - 20:00:05
+630 720 120 6 2
+Marcelo Rodrigues Leal 10/05/2020 - 08:00:03
+580 650 140 6 7
+Rogério Azevedo Costa 12/06/2020 - 07:54:02
+745 740 820 7 6

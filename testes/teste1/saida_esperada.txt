@@ -1,0 +1,26 @@
+Matematica 733.33
+Selecionados
+José 766.67
+João 733.33
+Lista de Espera
+Ana 700.0
+
+Física 633.33
+Selecionados
+Ana 700.0
+Beatriz 633.33
+Lista de Espera
+
+Química 783.33
+Selecionados
+Patrícia 800.0
+Carlos 783.33
+Lista de Espera
+Beatriz 633.33
+
+Estatística 566.67
+Selecionados
+Antônio 666.67
+Francisco 566.67
+Lista de Espera
+

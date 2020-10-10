@@ -41,8 +41,11 @@ def le_alunos(arquivo, quantidade):
         linha_1 = arquivo.readline().split()
         linha_2 = arquivo.readline().split()
 
-        nome = linha_1[0]
-        data = linha_1[1] + linha_1[2] + linha_1[3]
+        nome = ""
+        for texto in linha_1[:-3]:
+            nome += texto + " "
+        nome = nome[:-1]
+        data = linha_1[-3] + linha_1[-2] + linha_1[-1]
         data = datetime.strptime(data, '%d/%m/%Y-%H:%M:%S')
 
         nota_redacao = int(linha_2[0])
@@ -64,12 +67,9 @@ def le_alunos(arquivo, quantidade):
         alunos.append(aluno)
 
     def ordem(x):
-        return (x['nota_media'], x['notas'][0], x['data'])
+        return (-x['nota_media'], -x['notas'][0], x['data'])
 
     alunos = sorted(
-        alunos, reverse=True, key=ordem)
+        alunos, key=ordem)
 
     return alunos
-
-
-main('entrada.txt', 'saida.txt')
