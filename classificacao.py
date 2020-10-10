@@ -33,11 +33,11 @@ def calcula_classificacao(cursos, alunos):
 
 
 def selecionar_alunos_primeira_opcao(curso, alunos):
-    codigo = curso['codigo']
+    codigo_do_curso = curso['codigo']
     alunos_primeira_opcao = []
     for aluno in alunos:
         primeira_opcao = aluno['codigo_opcoes'][0]
-        if primeira_opcao == codigo:
+        if primeira_opcao == codigo_do_curso:
             alunos_primeira_opcao.append(aluno)
 
     if len(alunos_primeira_opcao) == 0:
@@ -50,13 +50,12 @@ def selecionar_alunos_primeira_opcao(curso, alunos):
 
 
 def selecionar_alunos_segunda_opcao(curso, alunos, classificacao):
-    nome = curso['nome']
     vagas = curso['vagas']
-    codigo = curso['codigo']
+    codigo_do_curso = curso['codigo']
     alunos_segunda_opcao = []
     for aluno in alunos:
         segunda_opcao = aluno['codigo_opcoes'][1]
-        if segunda_opcao == codigo:
+        if segunda_opcao == codigo_do_curso:
             alunos_segunda_opcao.append(aluno)
     if len(classificacao['selecionados']) == vagas:
         return [], alunos_segunda_opcao
