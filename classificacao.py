@@ -32,6 +32,23 @@ def calcula_classificacao(cursos, alunos):
     return classificacoes
 
 
+def selecionar_alunos_primeira_opcao(curso, alunos):
+    codigo = curso['codigo']
+    alunos_primeira_opcao = []
+    for aluno in alunos:
+        primeira_opcao = aluno['codigo_opcoes'][0]
+        if primeira_opcao == codigo:
+            alunos_primeira_opcao.append(aluno)
+
+    if len(alunos_primeira_opcao) == 0:
+        return [], []
+    else:
+        vagas = curso['vagas']
+        selecionados = alunos_primeira_opcao[:vagas]
+        lista_espera = alunos_primeira_opcao[vagas:]
+        return selecionados, lista_espera
+
+
 def selecionar_alunos_segunda_opcao(curso, alunos, classificacao):
     nome = curso['nome']
     vagas = curso['vagas']
@@ -47,23 +64,6 @@ def selecionar_alunos_segunda_opcao(curso, alunos, classificacao):
         vagas_restantes = vagas - len(classificacao['selecionados'])
         selecionados = alunos_segunda_opcao[:vagas_restantes]
         lista_espera = alunos_segunda_opcao[vagas_restantes:]
-        return selecionados, lista_espera
-
-
-def selecionar_alunos_primeira_opcao(curso, alunos):
-    codigo = curso['codigo']
-    alunos_primeira_opcao = []
-    for aluno in alunos:
-        primeira_opcao = aluno['codigo_opcoes'][0]
-        if primeira_opcao == codigo:
-            alunos_primeira_opcao.append(aluno)
-
-    if len(alunos_primeira_opcao) == 0:
-        return [], []
-    else:
-        vagas = curso['vagas']
-        selecionados = alunos_primeira_opcao[:vagas]
-        lista_espera = alunos_primeira_opcao[vagas:]
         return selecionados, lista_espera
 
 
