@@ -74,12 +74,12 @@ def salva_classificacao(classificacoes, nome_arquivo):
         nota_corte = classificacao['nota_corte']
         selecionados = classificacao['selecionados']
         lista_espera = classificacao['lista_espera']
-        arquivo.write('{} {}\n'.format(nome, nota_corte))
+        arquivo.write(f"{nome} {nota_corte}\n")
         arquivo.write('Selecionados\n')
         for i in selecionados:
-            arquivo.write('{} {}\n'.format(i['nome'], i['nota_media']))
+            arquivo.write(f"{i['nome']} {i['nota_media']}\n")
         arquivo.write("Lista de Espera\n")
         for i in lista_espera:
-            arquivo.write('{} {}\n'.format(i['nome'], i['nota_media']))
+            arquivo.write(f"{i['nome']} {i['nota_media']}\n")
         arquivo.write('\n')
     arquivo.close()

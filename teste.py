@@ -1,6 +1,7 @@
 from main import main
+import os
 
-QUANTIDADE = 5
+QUANTIDADE = len(os.listdir('testes'))
 
 for i in range(1, QUANTIDADE+1):
     main(f'testes/teste{i}/entrada.txt', f'testes/teste{i}/saida.txt')

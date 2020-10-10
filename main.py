@@ -48,9 +48,9 @@ def le_alunos(arquivo, quantidade):
         data = linha_1[-3] + linha_1[-2] + linha_1[-1]
         data = datetime.strptime(data, '%d/%m/%Y-%H:%M:%S')
 
-        nota_redacao = int(linha_2[0])
-        nota_matematica = int(linha_2[1])
-        nota_linguagens = int(linha_2[2])
+        nota_redacao = float(linha_2[0])
+        nota_matematica = float(linha_2[1])
+        nota_linguagens = float(linha_2[2])
         codigo_opcao_1 = int(linha_2[3])
         codigo_opcao_2 = int(linha_2[4])
         nota_media = round(
